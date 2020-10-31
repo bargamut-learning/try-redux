@@ -4,7 +4,7 @@ module.exports = {
     `<rootDir>/src/`,
     // `<rootDir>/tests/`,
   ],
-  testRegex: /.test\.(js|jsx)$/,
+  testRegex: `.test\.(js|jsx)$`,
   transform: {
     '^.+\\.(js|jsx)$': `babel-jest`,
   },
