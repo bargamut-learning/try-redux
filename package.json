@@ -6,8 +6,8 @@
   "scripts": {
     "lint::editorconfig": "editorconfig-checker -exclude '.git|node_modules|.DS_Store'",
     "lint": "npm run lint::editorconfig",
-    "test": "npn run lint && jest",
-    "test::coverage": "npn run test -- --coverage-reporters=text-lcov | coveralls",
+    "test": "npm run lint && jest",
+    "test::coverage": "npm run test -- --coverage-reporters=text-lcov | coveralls",
     "build": "webpack --config config/webpack.prod.js",
     "start": "webpack serve --config config/webpack.dev.js"
   },
