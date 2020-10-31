@@ -68,8 +68,8 @@ npm run build
 - [Babel](https://babeljs.io/)
 - [React](https://reactjs.org/)
 - [PostCSS](https://postcss.org/)
-- [Jest]()
-- [Coveralls]()
+- [Jest](https://jestjs.io)
+- [Coveralls](https://coveralls.io)
 
 ## Dependencies
 
@@ -115,6 +115,7 @@ npm run build
 - [`jest`](https://github.com/facebook/jest) - JavaScript testing library
   - [`@types/jest`](https://www.npmjs.com/package/@types/jest) - Type definitions for Jest
 - [`coveralls`](https://github.com/nickmerwin/node-coveralls) - Get the coverage reporting of coveralls.io
+- [`react-test-rederer`](https://www.npmjs.com/package/react-test-renderer) - Experimental React renderer to render React components to pure JavaScript objects, without depending on the DOM or a native mobile environment.
 
 ## Author
 
