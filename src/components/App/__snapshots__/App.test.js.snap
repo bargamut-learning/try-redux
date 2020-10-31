@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render App correctly with mock title 1`] = `
+<h1>
+  Test data
+</h1>
+`;
+
+exports[`should render App correctly without data 1`] = `
+<h1>
+  Default title
+</h1>
+`;

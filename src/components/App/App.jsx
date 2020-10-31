@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-function App({ text, style  }) {
+function App({ text = `Default title` }) {
   return (
-    <h1 style={{fontFamily: style.fontFamily}}>{text}</h1>
+    <h1>{text}</h1>
   );
 }
 

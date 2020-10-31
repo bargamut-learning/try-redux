@@ -25,7 +25,7 @@ console.log(`Also ${myGame.font}.`);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App text={myGame.name} style={{fontFamily: font}} />
+    <App text={myGame.name} />
 
     <img src={kitty} />
   </React.StrictMode>,
