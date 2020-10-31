@@ -1,8 +1,30 @@
+@font-face {
+  font-family: 'Abibas';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Abibas'),
+    url('../fonts/Abibas.otf') format('opentype');
+}
+
 :root {
   --test-variable: #fff;
+  --dark-gray: #3a3b3f;
 }
 
 html, body {
-  background-color: #3a3b3f;
+  background-color: var(--dark-gray);
   color: var(--test-variable);
+  font-family: 'Abibas', 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: normal;
+}
+
+img {
+  /* border: .1em solid ; */
+  border-radius: 12%/50%;
+  box-shadow: 0 0 .7em var(--test-variable);
 }
