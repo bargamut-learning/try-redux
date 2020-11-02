@@ -2,20 +2,20 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![David](https://img.shields.io/david/dev/bargamut-learning/try-redux)
 
-Trying Redux with React
+Trying Redux with React based on this article: [Введение в Redux & React-redux](https://habr.com/ru/post/498860/).
 
 ## Installation
 
 ```
-git clone git@github.com:bargamut/webpack-boilerplate-bargamut
-cd webpack-boilerplate-bargamut
+git clone git@github.com:bargamut-learning/try-redux
+cd try-redux
 npm i
 ```
 
 or
 
 ```
-git clone git@github.com:bargamut/webpack-boilerplate-bargamut my-project
+git clone git@github.com:bargamut-learning/try-redux my-project
 cd my-project
 npm i
 ```
@@ -67,6 +67,7 @@ npm run build
 - [webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
 - [PostCSS](https://postcss.org/)
 - [Jest](https://jestjs.io)
 - [Coveralls](https://coveralls.io)
