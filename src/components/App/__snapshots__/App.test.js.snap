@@ -1,13 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render App correctly with mock title 1`] = `
-<h1>
-  Test data
-</h1>
+Array [
+  <h1>
+    Test data
+  </h1>,
+  <form
+    onSubmit={[Function]}
+  >
+    <input />
+    <input
+      type="submit"
+      value="Create post"
+    />
+  </form>,
+  <ul
+    className="posts-list"
+  >
+    <li>
+      No posts...
+    </li>
+  </ul>,
+  <img />,
+]
 `;
 
 exports[`should render App correctly without data 1`] = `
-<h1>
-  Default title
-</h1>
+Array [
+  <h1>
+    Default title
+  </h1>,
+  <form
+    onSubmit={[Function]}
+  >
+    <input />
+    <input
+      type="submit"
+      value="Create post"
+    />
+  </form>,
+  <ul
+    className="posts-list"
+  >
+    <li>
+      No posts...
+    </li>
+  </ul>,
+  <img />,
+]
 `;
