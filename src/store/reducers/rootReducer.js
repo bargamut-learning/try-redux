@@ -1,10 +1,14 @@
 'use strict';
 
-import { CREATE_POST } from '../actionTypes/posts';
-
 function reducer(state, action) {
   switch (action.type) {
-    case CREATE_POST: return { value: action.payload };
+    case CREATE_POST:
+      const newState = {...state};
+
+      newState.posts.concat(action.payload); // { id: 1, title: `Test post` }
+
+      return newState;
+
     default: return state;
   }
 }
