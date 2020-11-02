@@ -4,11 +4,19 @@
 
 import { createStore } from 'redux';
 import initialState from './initialState';
-import createPost from './actionCreators/createPost';
 import reducer from './reducers/rootReducer';
 
-const store = createStore(reducer, initialState);
+const isHaveReduxDevTools =
+  process.env.NODE_ENV !== `production` &&
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
+const store = createStore(
+  reducer,
+  initialState,
+  isHaveReduxDevTools
+);
+
+/*
 console.log(store.getState());
 
 const unsubscribe = store.subscribe(() => console.log(`Subscribe:`, store.getState()));
@@ -32,5 +40,6 @@ store.dispatch(
 );
 
 console.log(store.getState());
+*/
 
 export default store;
