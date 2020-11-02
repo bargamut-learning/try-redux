@@ -1,11 +1,14 @@
 'use strict';
 
+/*
+In case of use single reducer
+
 function reducer(state, action) {
   switch (action.type) {
     case CREATE_POST:
       const newState = {...state};
 
-      newState.posts.concat(action.payload); // { id: 1, title: `Test post` }
+      newState.posts = newState.posts.concat(action.payload); // { id: 1, title: `Test post` }
 
       return newState;
 
@@ -14,3 +17,13 @@ function reducer(state, action) {
 }
 
 export default reducer;
+
+In case of split your reducer to many parts us combineReducers like below
+*/
+
+import { combineReducers } from 'redux';
+import postsReducer from './posts';
+
+export default combineReducers({
+  posts: postsReducer,
+});

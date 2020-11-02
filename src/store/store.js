@@ -2,15 +2,16 @@
 
 // Global store of the app
 
-import initialState from './initialState';
 import { createStore } from 'redux';
+import initialState from './initialState';
 import createPost from './actionCreators/createPost';
+import reducer from './reducers/rootReducer';
 
 const store = createStore(reducer, initialState);
 
 console.log(store.getState());
 
-const unsubscribe = store.subscribe(() => console.log(`Subscribe: ${store.getState()}`));
+const unsubscribe = store.subscribe(() => console.log(`Subscribe:`, store.getState()));
 
 // Will notify by console.log below and by subscribe
 store.dispatch(
