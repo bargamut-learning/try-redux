@@ -2,34 +2,20 @@
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
 import store from './store/store';
 
 import kitty from './img/kitty.jpg';
-import circle from './img/circle.svg';
-import font from './fonts/Abibas.otf';
 import './styles/main.css';
 
-import App from './components/App/App';
-
-class Game {
-  name = `Bargamut's Webpack Boilerplate`;
-  img = kitty;
-  vector = circle;
-  font = font;
-}
-
-const myGame = new Game();
-
-console.log(`I like ${myGame.name} and ${myGame.img}.`);
-console.log(`Also ${myGame.vector}.`);
-console.log(`Also ${myGame.font}.`);
+import AppContainer from './components/App/AppContainer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App text={myGame.name} />
-
-    <img src={kitty} />
+    <Provider store={store}>
+      <AppContainer text={`Bargamut's Trying Redux`} image={kitty} />
+    </Provider>
   </React.StrictMode>,
   document.getElementById(`root`)
 );
