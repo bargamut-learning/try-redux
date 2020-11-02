@@ -3,6 +3,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
+import store from './store/store';
+
 import kitty from './img/kitty.jpg';
 import circle from './img/circle.svg';
 import font from './fonts/Abibas.otf';
