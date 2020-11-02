@@ -28,3 +28,9 @@ img {
   border-radius: 12%/50%;
   box-shadow: 0 0 .7em var(--test-variable);
 }
+
+.posts-list {
+  margin: 2em auto;
+  width: 50vw;
+  text-align: initial;
+}
