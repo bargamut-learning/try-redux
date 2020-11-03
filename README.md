@@ -68,6 +68,7 @@ npm run build
 - [Babel](https://babeljs.io/)
 - [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
+- [Redux-Saga](https://redux-saga.js.org/)
 - [PostCSS](https://postcss.org/)
 - [Jest](https://jestjs.io)
 - [Coveralls](https://coveralls.io)
