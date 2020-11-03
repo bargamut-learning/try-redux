@@ -1,12 +1,17 @@
 import * as React from 'react';
 
-function App({ text = `Default title`, image, posts = [], createPost, }) {
+function App({ text = `Default title`, image, posts = [], createPost, updatePost, }) {
   const postTitleInput = React.createRef();
 
-  const postsList = posts.length > 0
-    ? posts.map((post) => <li key={post.id}>{post.title}</li>)
-    : <li>No posts...</li>;
+  const handleUpdatePost = (id, title) => (event) => {
+    event.preventDefault();
 
+    updatePost(id, { title: `${title} updated!` });
+  };
+
+  const postsList = posts.length > 0
+    ? posts.map((post) => <li key={post.id}>{post.title} <button onClick={handleUpdatePost(post.id, post.title)}>Update</button></li>)
+    : <li>No posts...</li>;
 
   const handleCreatePost = (event) => {
     event.preventDefault();

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import createPost from '../../store/actionCreators/createPost';
+import { createPost, updatePost } from '../../store/actionCreators/posts';
 
 import App from './App';
 
@@ -9,9 +9,10 @@ const mapStateToProps = (state, ownProps) => ({
   posts: state.posts,
 });
 
-const mapDispatchToProps = {
-  createPost,
-};
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  createPost: (post) => dispatch(createPost(post)),
+  updatePost: (id, post) => dispatch(updatePost(id, post)),
+});
 
 export default connect(
   mapStateToProps,
