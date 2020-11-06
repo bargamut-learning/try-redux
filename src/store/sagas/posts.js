@@ -1,11 +1,11 @@
 'use strict';
 
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
-// import API from '...';
+import API from '../../api/posts';
 
 function* fetchPost(action) {
   try {
-    const post = yield call(API.fetchPosts, action.payload.postId);
+    const post = yield call(API.fetchPost, action.payload.postId);
 
     yield put({ type: `POST_FETCH_SUCCEEDED`, post });
   } catch (error) {
