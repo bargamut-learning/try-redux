@@ -5,14 +5,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.createPost = this.props.createPost;
-    this.fetchPosts = this.props.fetchPosts;
+    this.createPost = props.createPost;
 
     this.postTitleInput = React.createRef();
-  }
-
-  componentDidMount = () => {
-    this.fetchPosts();
   }
 
   handleCreatePost = (event) => {
