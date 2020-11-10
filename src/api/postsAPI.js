@@ -2,8 +2,10 @@
 
 import { POSTS } from '../../mocks';
 
+function fetchPosts() {
+  return POSTS;
+}
+
 export default {
-  fetchPost(id) {
-    return POSTS.find((post) => post.id === id);
-  },
+  fetchPosts
 };
