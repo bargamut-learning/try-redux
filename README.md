@@ -87,6 +87,8 @@ npm run build
 
 - [`@babel/core`](https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
 - [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties directly on a class (an example Babel config)
+- [`@babel/plugin-transform-runtime`](https://babeljs.io/docs/en/babel-plugin-transform-runtime) - Enables the re-use of Babel's injected helper code to save on codesize
+  - [@babel/runtime](https://babeljs.io/docs/en/babel-runtime) - A library that contains Babel modular runtime helpers and a version of regenerator-runtime
 - [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
 - [`@babel/preset-react`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for React
 
