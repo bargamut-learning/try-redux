@@ -110,6 +110,10 @@ npm run build
 - [`terser-webpack-plugin`](https://github.com/webpack-contrib/terser-webpack-plugin) - Optimize and minimize JavaScript
 - [`babel-jest`](https://www.npmjs.com/package/babel-jest) - Transform test scripts with Babel
 
+### Libraries
+
+- [Reselect](https://www.npmjs.com/package/reselect) - Simple “selector” library for Redux (and others).
+
 ### Tools
 
 - [`editorconfig-checker`](https://github.com/editorconfig-checker/editorconfig-checker) - Verifying that your files are in harmony with your .editorconfig
