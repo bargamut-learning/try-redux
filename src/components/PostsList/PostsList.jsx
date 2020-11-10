@@ -22,13 +22,19 @@ class PostsList extends React.Component {
   }
 
   render() {
-    const { posts } = this.props;
+    const { posts, totalPosts } = this.props;
 
     const postsList = posts.length > 0
       ? posts.map((post) => <PostItem key={post.id} post={post} />)
       : <li>{this.state.postsLoading ? `Loading` : `No posts`}...</li>;
 
-    return <ul className="posts-list">{postsList}</ul>;
+    return (
+      <>
+        <span>{totalPosts}</span>
+        
+        <ul className="posts-list">{postsList}</ul>
+      </>
+    );
   }
 }
 
