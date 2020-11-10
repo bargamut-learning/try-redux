@@ -22,7 +22,7 @@ In case of split your reducer to many parts us combineReducers like below
 */
 
 import { combineReducers } from 'redux';
-import postsReducer from './posts';
+import postsReducer from './postsReducer';
 
 export default combineReducers({
   posts: postsReducer,

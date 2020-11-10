@@ -1,6 +1,6 @@
 'use strict';
 
-import { CREATE_POST, UPDATE_POST } from '../actionTypes/posts';
+import { CREATE_POST, UPDATE_POST } from '../actionTypes/postsActionTypes';
 
 export function createPost(payload) {
   return {

@@ -1,6 +1,6 @@
 'use strict';
 
-import { CREATE_POST, UPDATE_POST } from '../actionTypes/posts';
+import { CREATE_POST, UPDATE_POST } from '../actionTypes/postsActionTypes';
 
 function postsReducer(state = [], action) {
   switch (action.type) {
