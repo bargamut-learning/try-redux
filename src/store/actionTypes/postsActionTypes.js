@@ -1,4 +1,8 @@
 'use strict';
 
+export const POSTS_FETCH_REQUESTED = `POSTS_FETCH_REQUESTED`;
+export const POSTS_FETCH_SUCCEEDED = `POSTS_FETCH_SUCCEEDED`;
+export const POSTS_FETCH_FAILED = `POSTS_FETCH_FAILED`;
+
 export const CREATE_POST = `CREATE_POST`;
 export const UPDATE_POST = `UPDATE_POST`;
