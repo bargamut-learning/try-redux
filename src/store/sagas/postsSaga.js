@@ -2,24 +2,38 @@
 
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import { POSTS_FETCH_REQUESTED } from '../actionTypes/postsActionTypes';
-import { fetchPostsFailed, fetchPostsSucceeded } from '../actionCreators/postsActionCreators';
+import {
+  fetchPostsFailed,
+  fetchPostsSucceeded,
+} from '../actionCreators/postsActionCreators';
+import {
+  startAction,
+  stopAction,
+  startRefreshAction,
+  stopRefreshAction,
+} from '../actionCreators/uiActionCreators';
 import API from '../../api/postsAPI';
 
-// Imitation async calls
-function delay(ms) {
-  return new Promise(res => setTimeout(res, ms));
-}
-
-function* fetchPost() {
-  yield delay(1000);
-
+function* fetchPost({ type, payload }) {
   try {
+    const { refreshing } = payload;
+
+    yield put(refreshing
+      ? startRefreshAction(type)
+      : startAction(type)
+    );
+
     const posts = yield call(API.fetchPosts);
 
     // Dispatch actions
     yield put(fetchPostsSucceeded(posts));
   } catch (error) {
     yield put(fetchPostsFailed({ message: error.message }));
+  } finally {
+    yield put(payload.refreshing
+      ? stopRefreshAction(type)
+      : stopAction(type)
+    );
   }
 }
 
