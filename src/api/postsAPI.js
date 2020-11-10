@@ -1,9 +1,8 @@
 'use strict';
 
-import { POSTS } from '../../mocks';
-
-function fetchPosts() {
-  return POSTS;
+async function fetchPosts() {
+  return await fetch(`https://jsonplaceholder.typicode.com/posts/`)
+    .then((respose) => respose.json());
 }
 
 export default {
