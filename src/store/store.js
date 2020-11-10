@@ -2,19 +2,30 @@
 
 // Global store of the app
 
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 import initialState from './initialState';
 import reducer from './reducers/rootReducer';
+import mySagaPost from './sagas/postsSaga';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
 const isHaveReduxDevTools =
   process.env.NODE_ENV !== `production` &&
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+  composeEnhancers;
+
+const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   reducer,
   initialState,
-  isHaveReduxDevTools
+  compose(
+    applyMiddleware(sagaMiddleware),
+    isHaveReduxDevTools ? composeEnhancers() : (a) => a,
+  )
 );
+
+sagaMiddleware.run(mySagaPost);
 
 /*
 console.log(store.getState());
