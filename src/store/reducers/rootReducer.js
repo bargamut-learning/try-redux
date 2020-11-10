@@ -23,7 +23,9 @@ In case of split your reducer to many parts us combineReducers like below
 
 import { combineReducers } from 'redux';
 import postsReducer from './postsReducer';
+import uiReducer from './uiReducer';
 
 export default combineReducers({
   posts: postsReducer,
+  ui: uiReducer,
 });
