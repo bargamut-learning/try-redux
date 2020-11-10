@@ -8,8 +8,13 @@ import {
   UPDATE_POST,
 } from '../actionTypes/postsActionTypes';
 
-export function fetchPosts() {
-  return { type: POSTS_FETCH_REQUESTED };
+export function fetchPosts(payload) {
+  return {
+    type: POSTS_FETCH_REQUESTED,
+    payload: {
+      refreshing: payload
+    }
+  };
 }
 
 export function fetchPostsSucceeded(payload) {
