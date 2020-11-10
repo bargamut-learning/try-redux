@@ -1,47 +1,45 @@
 import * as React from 'react';
+import PostsList from '../PostsList/PostsListContainer';
 
-function App({ text = `Default title`, image, posts = [], createPost, updatePost, fetchPosts, }) {
-  const postTitleInput = React.createRef();
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const handleFetchPost = (event) => {
+    this.createPost = this.props.createPost;
+    this.fetchPosts = this.props.fetchPosts;
+
+    this.postTitleInput = React.createRef();
+  }
+
+  componentDidMount = () => {
+    this.fetchPosts();
+  }
+
+  handleCreatePost = (event) => {
     event.preventDefault();
 
-    fetchPosts();
+    this.createPost({ title: this.postTitleInput.current.value });
   };
 
-  const handleUpdatePost = (id, title) => (event) => {
-    event.preventDefault();
+  render() {
+    const { text = `Default title`, image } = this.props;
 
-    updatePost(id, { title: `${title} updated!` });
-  };
+    return (
+      <>
+        <h1>{this.text}</h1>
 
-  const postsList = posts.length > 0
-    ? posts.map((post) => <li key={post.id}>{post.title} <button onClick={handleUpdatePost(post.id, post.title)}>Update</button></li>)
-    : <li>No posts...</li>;
+        <form onSubmit={this.handleCreatePost}>
+          <input ref={this.postTitleInput} />
 
-  const handleCreatePost = (event) => {
-    event.preventDefault();
+          <input type="submit" value="Create post" />
+        </form>
 
-    createPost({ title: postTitleInput.current.value });
-  };
+        <PostsList />
 
-  return (
-    <>
-      <h1>{text}</h1>
-
-      <form onSubmit={handleCreatePost}>
-        <input ref={postTitleInput} />
-
-        <input type="submit" value="Create post" />
-      </form>
-
-      <button onClick={handleFetchPost}>Fetch post</button>
-
-      <ul className="posts-list">{postsList}</ul>
-
-      <img src={image} />
-    </>
-  );
+        <img src={image} />
+      </>
+    );
+  }
 }
 
 export default App;

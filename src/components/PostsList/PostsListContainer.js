@@ -1,19 +1,16 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { fetchPosts, createPost } from '../../store/actionCreators/postsActionCreators';
-
-import App from './App';
+import PostsList from './PostsList';
 
 const mapStateToProps = (state, ownProps) => ({
+  posts: state.posts,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  createPost: (post) => dispatch(createPost(post)),
-  fetchPosts: () => dispatch(fetchPosts()),
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(PostsList);
