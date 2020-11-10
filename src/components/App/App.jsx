@@ -1,7 +1,13 @@
 import * as React from 'react';
 
-function App({ text = `Default title`, image, posts = [], createPost, updatePost, }) {
+function App({ text = `Default title`, image, posts = [], createPost, updatePost, fetchPosts, }) {
   const postTitleInput = React.createRef();
+
+  const handleFetchPost = (event) => {
+    event.preventDefault();
+
+    fetchPosts();
+  };
 
   const handleUpdatePost = (id, title) => (event) => {
     event.preventDefault();
@@ -28,6 +34,8 @@ function App({ text = `Default title`, image, posts = [], createPost, updatePost
 
         <input type="submit" value="Create post" />
       </form>
+
+      <button onClick={handleFetchPost}>Fetch post</button>
 
       <ul className="posts-list">{postsList}</ul>
 

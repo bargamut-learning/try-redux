@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { createPost, updatePost } from '../../store/actionCreators/posts';
+import { createPost, fetchPosts, updatePost } from '../../store/actionCreators/postsActionCreators';
 
 import App from './App';
 
@@ -12,6 +12,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
   createPost: (post) => dispatch(createPost(post)),
   updatePost: (id, post) => dispatch(updatePost(id, post)),
+  fetchPosts: () => dispatch(fetchPosts()),
 });
 
 export default connect(
