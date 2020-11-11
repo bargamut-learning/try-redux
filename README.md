@@ -122,8 +122,10 @@ npm run build
 
 - [`jest`](https://github.com/facebook/jest) - JavaScript testing library
   - [`@types/jest`](https://www.npmjs.com/package/@types/jest) - Type definitions for Jest
+  - [`@testing-library/jest-dom`](https://testing-library.com/docs/ecosystem-jest-dom/) - A companion library for Testing Library that provides custom DOM element matchers for Jest
 - [`coveralls`](https://github.com/nickmerwin/node-coveralls) - Get the coverage reporting of coveralls.io
 - [`react-test-rederer`](https://www.npmjs.com/package/react-test-renderer) - Experimental React renderer to render React components to pure JavaScript objects, without depending on the DOM or a native mobile environment.
+- [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/) - React Testing Library is a simple and complete React DOM testing utilities that encourage good testing practices.
 
 ## Author
 
