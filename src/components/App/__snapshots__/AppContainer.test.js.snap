@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render App correctly with mock title 1`] = `
+<div>
+  <h1>
+    Test data
+  </h1>
+  <form>
+    <input />
+    <input
+      type="submit"
+      value="Create post"
+    />
+  </form>
+  <span>
+    1
+  </span>
+  <ul
+    class="posts-list"
+  >
+    <li>
+      <button>
+        Update
+      </button>
+       
+      Test post
+    </li>
+  </ul>
+  <img />
+</div>
+`;
+
+exports[`should render App correctly without data 1`] = `
+<div>
+  <h1>
+    Default title
+  </h1>
+  <form>
+    <input />
+    <input
+      type="submit"
+      value="Create post"
+    />
+  </form>
+  <span>
+    0
+  </span>
+  <ul
+    class="posts-list"
+  >
+    <li>
+      Loading
+      ...
+    </li>
+  </ul>
+  <img />
+</div>
+`;

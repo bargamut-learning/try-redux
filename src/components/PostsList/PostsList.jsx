@@ -31,7 +31,7 @@ class PostsList extends React.Component {
     return (
       <>
         <span>{totalPosts}</span>
-        
+
         <ul className="posts-list">{postsList}</ul>
       </>
     );
