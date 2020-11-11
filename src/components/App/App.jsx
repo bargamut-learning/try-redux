@@ -21,7 +21,7 @@ class App extends React.Component {
 
     return (
       <>
-        <h1>{this.text}</h1>
+        <h1>{text}</h1>
 
         <form onSubmit={this.handleCreatePost}>
           <input ref={this.postTitleInput} />

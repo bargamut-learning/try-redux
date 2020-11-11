@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render App correctly with mock title 1`] = `
-Array [
+<React.Fragment>
   <h1>
     Test data
-  </h1>,
+  </h1>
   <form
     onSubmit={[Function]}
   >
@@ -13,23 +13,17 @@ Array [
       type="submit"
       value="Create post"
     />
-  </form>,
-  <ul
-    className="posts-list"
-  >
-    <li>
-      No posts...
-    </li>
-  </ul>,
-  <img />,
-]
+  </form>
+  <Memo(Connect(PostsList)) />
+  <img />
+</React.Fragment>
 `;
 
 exports[`should render App correctly without data 1`] = `
-Array [
+<React.Fragment>
   <h1>
     Default title
-  </h1>,
+  </h1>
   <form
     onSubmit={[Function]}
   >
@@ -38,14 +32,8 @@ Array [
       type="submit"
       value="Create post"
     />
-  </form>,
-  <ul
-    className="posts-list"
-  >
-    <li>
-      No posts...
-    </li>
-  </ul>,
-  <img />,
-]
+  </form>
+  <Memo(Connect(PostsList)) />
+  <img />
+</React.Fragment>
 `;

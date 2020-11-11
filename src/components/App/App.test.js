@@ -1,7 +1,7 @@
 'use strict';
 
 import * as React from 'react';
-import * as renderer from 'react-test-renderer';
+import ShallowRenderer from 'react-test-renderer/shallow';
 
 import App from './App';
 
@@ -10,9 +10,11 @@ const mock = {
 };
 
 it('should render App correctly without data', () => {
-  const app = renderer
-    .create(<App />)
-    .toJSON();
+  const renderer = new ShallowRenderer();
+
+  renderer.render(<App />);
+
+  const app = renderer.getRenderOutput();
 
   expect(app).toMatchSnapshot();
 });
@@ -20,9 +22,11 @@ it('should render App correctly without data', () => {
 it('should render App correctly with mock title', () => {
   const { text: title } = mock;
 
-  const app = renderer
-    .create(<App text={title} />)
-    .toJSON();
+  const renderer = new ShallowRenderer();
+
+  renderer.render(<App text={title} />);
+
+  const app = renderer.getRenderOutput();
 
   expect(app).toMatchSnapshot();
 });
